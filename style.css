@@ -1,0 +1,34 @@
+body {
+  background-color: blue;
+  color: white;
+  padding-top:100px;
+
+}
+.playerbox {
+
+padding-left:13%;
+
+}
+
+.computerbox {
+
+padding-left:7%;
+}
+
+#player-form{
+
+  padding-bottom:25px;
+}
+
+#computer-weapon{
+  padding-bottom:25px;
+  padding-top:25px;
+  color:lime;
+}
+.formtext {
+  color:black;
+}
+
+select {
+  color:black;
+}

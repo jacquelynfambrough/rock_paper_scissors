@@ -1,0 +1,64 @@
+<!doctype HTMl>
+<html>
+  <head>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>JS Play!</title>
+
+      <!-- STYLESHEETS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+
+  <!-- VENDOR SCRIPTS -->
+  <script src="https://code.jquery.com/jquery-2.2.3.js" integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4=" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.js"></script>
+
+  <!-- APPLICATION SCRIPTS -->
+  <script src="./app.js"></script>
+  </head>
+  <body>
+
+  <div class = "col-sm-6 playerbox" >
+    <div id = "player-form">
+      Player Name: <input type = "form" class= "formtext" id = "name-value" onchange="playerName=this.value;" placeholder = "What's your name?"></input>
+      <input type = "submit" class = "btn btn-warning" id = "name-form"></input>
+    </div>
+    <div id = "player-one" style = "display:none;">
+      <div class="form-group">
+    <label for="playerMove" >Choose your weapon!</label>
+    <select id = "playerWeapon" >
+      <option type = "text" value = "rock" id = "rock">Rock</option>
+      <option type = "text" value = "paper" id = "paper">Paper</option>
+      <option type = "text" value = "scissors" id = "scissors">Scissors</option>
+    </select>
+      <input type = "submit" class = "btn btn-success" id = "player_one_button"></input>
+  </div>
+    </div>
+    <div id = "player-score">
+      <b>Player Score:</b> <div id = "pscore"></div>
+    </div>
+</div>
+
+<div class = "col-sm-6 computerbox" >
+
+
+  <div class = "player-comp">
+    <div class="form-group">
+  <label for="exampleSelect1">Your opponent's choice:</label>
+
+
+    <div id = "computer-weapon">
+      Bring it on, bitch!
+    </div>
+    <div id = "computer-score">
+      <b>Computer Score:</b> <div id = "cscore"></div>
+    </div>
+</div>
+  </div>
+</div>
+
+
+  </body>
+</html>
