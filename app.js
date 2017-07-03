@@ -19,7 +19,7 @@ $(document).ready(function() {
         else
         {
         $('#player-form').text("Player 1: " + playerName);
-        $(".player-one").data("style", "background-color:black;");
+        $("#player-one").attr("style", "display:block;");
 
           alert("Welcome " + playerName + "!");
           $('#pscore').text(playerScore);
