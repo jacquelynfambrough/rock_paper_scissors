@@ -19,7 +19,8 @@ $(document).ready(function() {
         else
         {
         $('#player-form').text("Player 1: " + playerName);
-        $("#player-one").attr("style", "display:block;");
+        $('#start-form').attr("style", "display:none;");
+        $("#game-board").attr("style", "display:block;");
 
           alert("Welcome " + playerName + "!");
           $('#pscore').text(playerScore);
@@ -36,62 +37,56 @@ $(document).ready(function() {
                     alert(pWeapon + " vs " + compWeapon + " Computer wins!!");
                     compScore ++;
                     $('#cscore').text(compScore);
-                    nameExists ++;
                     console.log(playerName);
                   }
                   else if (pWeapon === "rock" && compWeapon === "scissors"){
-                    alert(pWeapon + " vs " + compWeapon + " " + playerName + " wins!!");
+                    alert(pWeapon + " vs " + compWeapon + " " + playerName + " wins!!" );
                     playerScore ++;
                     $('#pscore').text(playerScore);
-                    nameExists ++;
                     console.log(playerName);
                   }
                   else if (pWeapon === "paper" && compWeapon === "rock"){
                     alert(pWeapon + " vs " + compWeapon + " " + playerName + " wins!!");
                     playerScore ++;
                     $('#pscore').text(playerScore);
-                    nameExists ++;
                     console.log(playerName);
                   }
                   else if (pWeapon === "paper" && compWeapon === "scissors"){
                     alert(pWeapon + " vs " + compWeapon + " Computer wins!!");
                     compScore ++;
                     $('#cscore').text(compScore);
-                    nameExists ++;
                     console.log(playerName);
                   }
                   else if (pWeapon === "scissors" && compWeapon === "rock"){
                     alert(pWeapon + " vs " + compWeapon + " Computer wins!!");
                     compScore ++;
                     $('#cscore').text(compScore);
-                    nameExists ++;
                     console.log(playerName);
                   }
                   else if (pWeapon === "scissors" && compWeapon === "paper"){
                     alert(pWeapon + " vs " + compWeapon + " " + playerName + " wins!!");
                     playerScore ++;
                     $('#pscore').text(playerScore);
-                    nameExists ++;
                     console.log(playerName);
                   }
                   else {
                     alert(pWeapon + " vs " + compWeapon + " TIE!");
-                    nameExists ++;
                   };
                   if (playerScore == 3) {
-                    alert("GAME OVER, " + playerName + " takes all!");
-                    compScore = 0;
-                    playerScore = 0;
-                    $('#pscore').text(playerScore);
-                    $('#cscore').text(compScore);
-
+                    $('#game-board').attr('style', 'display:none;');
+                    $('#computer-loss').attr('style', 'display:block;text-align:center;');
+                    $('#restart').on('click', function(event){
+                      event.preventDefault();
+                      location.reload();
+                    });
                   }
                   else if (compScore == 3) {
-                    alert ("GAME OVER, computer takes all!");
-                    compScore = 0;
-                    playerScore = 0;
-                    $('#pscore').text(playerScore);
-                    $('#cscore').text(compScore);
+                    $('#game-board').attr('style', 'display:none;');
+                    $('#computer-win').attr('style', 'display:block;text-align:center;');
+                    $('#restart').on('click', function(event){
+                      event.preventDefault();
+                      location.reload();
+                    });
                   };
                 });
 

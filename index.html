@@ -19,13 +19,22 @@
   <script src="./app.js"></script>
   </head>
   <body>
-
+    <div id = "start-form" class = "center-block">
+      <div class = "col-md-6 col-sm-12" style = "text-align:center" >
+        <input type = "form" class= "formtext" id = "name-value" onchange="playerName=this.value;" placeholder = "What's your name?"></input>
+        <input type = "submit" class = "btn btn-warning" id = "name-form"></input>
+      </div>
+      <div class = "col-md-6 col-sm-12" style = "text-align:center">
+        <img src = "images/computerplay.png" width = 250>
+    </div>
+  </div>
+<div id = "game-board" style = "display:none;">
   <div class = "col-sm-6 playerbox" >
     <div id = "player-form">
-      Player Name: <input type = "form" class= "formtext" id = "name-value" onchange="playerName=this.value;" placeholder = "What's your name?"></input>
-      <input type = "submit" class = "btn btn-warning" id = "name-form"></input>
+      Player Name:
+
     </div>
-    <div id = "player-one" style = "display:none;">
+    <div id = "player-one">
       <div class="form-group">
     <label for="playerMove" >Choose your weapon!</label>
     <select id = "playerWeapon" >
@@ -50,7 +59,7 @@
 
 
     <div id = "computer-weapon">
-      Bring it on, bitch!
+
     </div>
     <div id = "computer-score">
       <b>Computer Score:</b> <div id = "cscore"></div>
@@ -58,6 +67,19 @@
 </div>
   </div>
 </div>
+</div>
+<div id = "computer-loss" style = "display:none;" class = "col-sm-12 center-block">
+  <h1 style = "color:green;">YOU WIN!!</h1><br>
+  <img src = "images/computerloses.png" width = 250><br><br>
+  <button class = "btn btn-default" id="restart">Play again!</button>
+</div>
+<div id = "computer-win" style = "display:none;" class = "col-sm-12 center-block">
+  <h1>YOU LOSE!!</h1><br>
+  <img src = "images/computerwins.png" width = 250><br><br>
+  <button class = "btn btn-default" id="restart">Play again!</button>
+</div>
+
+
 
 
   </body>
